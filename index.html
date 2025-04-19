@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Progress Tracker - Dates in Rows</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 dark:text-white p-4 transition-all min-h-screen">
+
+  <div class="flex justify-between items-center mb-4">
+    <h1 class="text-xl font-bold">📅 Daily Progress Tracker (6 Months)</h1>
+    <button id="scrollToday" class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded ml-4">
+        📍 Scroll to Today
+      </button>
+      <button id="downloadCSV" class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded ml-2">
+        ⬇️ Download CSV
+      </button>
+      
+      
+    <button id="toggleDark" class="bg-gray-300 dark:bg-gray-700 px-3 py-1 rounded">Toggle 🌗</button>
+  </div>
+
+  <div class="overflow-auto border rounded-lg">
+    <table id="progressTable" class="table-auto w-full border-collapse text-sm">
+      <!-- Rendered via JS -->
+    </table>
+  </div>
+  <div class="my-8">
+    <h2 class="text-lg font-semibold">📊 Weekly Progress</h2>
+    <canvas id="weeklyChart" class="w-full h-64"></canvas>
+    <h2 class="text-lg font-semibold mt-4">📊 Monthly Progress</h2>
+    <canvas id="monthlyChart" class="w-full h-64"></canvas>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
